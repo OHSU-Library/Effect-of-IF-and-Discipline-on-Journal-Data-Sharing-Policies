@@ -90,6 +90,8 @@ table2 %>%
   kable_styling("striped")
 ```
 
+## Table 2 plot
+
 ```{r table2_plot, fig.width=8,fig.height=6,dpi=400}
 table2p <- left_join(table2,label_dict,by=c("data_sharing_policy_type"="longnames"))%>%
   rename(pct_yes = "% Yes")

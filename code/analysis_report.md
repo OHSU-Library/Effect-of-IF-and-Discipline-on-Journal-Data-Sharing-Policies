@@ -3,6 +3,7 @@ Analysis - Data Sharing Policies
 
 -   [Table 1](#table-1)
 -   [Table 2](#table-2)
+    -   [Table 2 plot](#table-2-plot)
 -   [Table 3](#table-3)
     -   [Table 3 Plot](#table-3-plot)
 
@@ -326,6 +327,9 @@ Yes
                                 </tr>
                                 </tbody>
                                 </table>
+
+Table 2 plot
+------------
 
 ``` r
 table2p <- left_join(table2,label_dict,by=c("data_sharing_policy_type"="longnames"))%>%
