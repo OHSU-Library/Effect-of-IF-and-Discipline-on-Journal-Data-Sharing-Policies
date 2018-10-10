@@ -347,7 +347,7 @@ ggplot(table2p,aes(x=factor(num,levels=8:1),y=pct_yes,fill=data_sharing_policy_t
             vjust=-1.8,hjust="left")+
   #scale_fill_viridis_d(guide=guide_legend(ncol=2),name=NULL)+
   scale_fill_viridis_d(guide=FALSE)+
-  scale_y_continuous(limits=c(0,50),expand=c(0,0))+
+  scale_y_continuous(limits=c(0,50),expand=c(0,0),breaks=NULL)+
   scale_x_discrete(breaks = NULL)+
   coord_flip()+
   ggtitle("Type of Data Sharing Policy (% Yes / 447 Journals)")
@@ -727,7 +727,7 @@ a <- ggplot(table3p_a,
             hjust="left")+
   #scale_fill_viridis_d(guide=guide_legend(ncol=2),name=NULL)+
   scale_fill_viridis_d(guide=FALSE)+
-  scale_y_continuous(limits=c(0,100),expand=c(0,0))+
+  scale_y_continuous(limits=c(0,100),expand=c(0,0),breaks=NULL)+
   scale_x_continuous(breaks = NULL,expand=c(0,0.6))+
   facet_grid(category~.,space="free",scales="free",switch="both",as.table=FALSE)+
   coord_flip()+
@@ -762,7 +762,7 @@ b <- ggplot(table3p_b,
             hjust="left")+
   #scale_fill_viridis_d(guide=guide_legend(ncol=2),name=NULL)+
   scale_fill_brewer(guide=FALSE,palette="Blues")+
-  scale_y_continuous(limits=c(0,100),expand=c(0,0))+
+  scale_y_continuous(limits=c(0,100),expand=c(0,0),breaks=NULL)+
   scale_x_continuous(breaks = NULL,expand=c(0,0.6))+
   coord_flip()+
   ggtitle("If data is journal hosted\n(% Yes / 17 Journals)")+
