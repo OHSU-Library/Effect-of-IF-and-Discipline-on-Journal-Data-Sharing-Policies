@@ -38,7 +38,8 @@ knitr::opts_chunk$set(
 ```
 
 ```{r}
-alldata <- read_excel(here("data","RawData_Reviewed_by_NV.xlsx"),sheet="All data",skip = 1,na = c("","NA"))
+#alldata <- read_excel(here("data","RawData_Reviewed_by_NV.xlsx"),sheet="All data",skip = 1,na = c("","NA"))
+alldata <- read_excel(here("data","final_10152018.xlsx"),skip=2, na=c("","NA"))
 alldata %<>% clean_names()
 ```
 
@@ -232,7 +233,7 @@ b <- ggplot(table3p_b,
   scale_y_continuous(limits=c(0,100),expand=c(0,0),breaks=NULL)+
   scale_x_continuous(breaks = NULL,expand=c(0,0.6))+
   coord_flip()+
-  ggtitle("If data is journal hosted\n(% Yes / 17 Journals)")+
+  ggtitle("If data is journal hosted\n(% Yes / 19 Journals)")+
   theme(strip.background =element_rect(fill="white"))+
   theme(strip.text = element_text(colour = 'black'))
 

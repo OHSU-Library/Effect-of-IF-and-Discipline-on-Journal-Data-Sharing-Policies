@@ -8,7 +8,8 @@ Analysis - Data Sharing Policies
     -   [Table 3 Plot](#table-3-plot)
 
 ``` r
-alldata <- read_excel(here("data","RawData_Reviewed_by_NV.xlsx"),sheet="All data",skip = 1,na = c("","NA"))
+#alldata <- read_excel(here("data","RawData_Reviewed_by_NV.xlsx"),sheet="All data",skip = 1,na = c("","NA"))
+alldata <- read_excel(here("data","final_10152018.xlsx"),skip=2, na=c("","NA"))
 alldata %<>% clean_names()
 ```
 
@@ -260,13 +261,13 @@ Yes
             1.  Shared data will be used in peer review
                 </td>
                 <td style="text-align:right;">
-                423
+                422
                 </td>
                 <td style="text-align:right;">
-                24
+                25
                 </td>
                 <td style="text-align:right;">
-                5.4
+                5.6
                 </td>
                 </tr>
                 <tr>
@@ -511,13 +512,13 @@ Journal hosted
 447
 </td>
 <td style="text-align:right;">
-427
+428
 </td>
 <td style="text-align:right;">
-20
+19
 </td>
 <td style="text-align:right;">
-4.5
+4.3
 </td>
 </tr>
 <tr>
@@ -528,13 +529,13 @@ By reader request to authors
 447
 </td>
 <td style="text-align:right;">
-439
+438
 </td>
 <td style="text-align:right;">
-8
+9
 </td>
 <td style="text-align:right;">
-1.8
+2.0
 </td>
 </tr>
 <tr>
@@ -581,16 +582,16 @@ Unspecified
 Journal will host regardless of size
 </td>
 <td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
 17
 </td>
 <td style="text-align:right;">
-16
+2
 </td>
 <td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-5.9
+10.5
 </td>
 </tr>
 <tr>
@@ -598,16 +599,16 @@ Journal will host regardless of size
 Journal has data hosting file/s size limit
 </td>
 <td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
 17
 </td>
 <td style="text-align:right;">
-14
+2
 </td>
 <td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-17.6
+10.5
 </td>
 </tr>
 <tr>
@@ -615,16 +616,16 @@ Journal has data hosting file/s size limit
 Unspecified
 </td>
 <td style="text-align:right;">
-17
+19
 </td>
 <td style="text-align:right;">
 4
 </td>
 <td style="text-align:right;">
-13
+15
 </td>
 <td style="text-align:right;">
-76.5
+78.9
 </td>
 </tr>
 <tr grouplength="1">
@@ -765,7 +766,7 @@ b <- ggplot(table3p_b,
   scale_y_continuous(limits=c(0,100),expand=c(0,0),breaks=NULL)+
   scale_x_continuous(breaks = NULL,expand=c(0,0.6))+
   coord_flip()+
-  ggtitle("If data is journal hosted\n(% Yes / 17 Journals)")+
+  ggtitle("If data is journal hosted\n(% Yes / 19 Journals)")+
   theme(strip.background =element_rect(fill="white"))+
   theme(strip.text = element_text(colour = 'black'))
 
