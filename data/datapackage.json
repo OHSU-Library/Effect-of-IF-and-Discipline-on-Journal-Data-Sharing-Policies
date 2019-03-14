@@ -1,0 +1,725 @@
+{
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "profile": "tabular-data-resource",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "ID",
+                        "type": "integer",
+                        "format": "default",
+                        "trueValues": [
+                            "true",
+                            "True",
+                            "TRUE",
+                            "1"
+                        ],
+                        "falseValues": [
+                            "false",
+                            "False",
+                            "FALSE",
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "Journal ID",
+                        "description": "ID applied to each journal for study purposes",
+                        "constraints": {
+                            "required": true,
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Name",
+                        "type": "string",
+                        "format": "default",
+                        "trueValues": [
+                            "true",
+                            "True",
+                            "TRUE",
+                            "1"
+                        ],
+                        "falseValues": [
+                            "false",
+                            "False",
+                            "FALSE",
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "Journal Title",
+                        "description": "Journal title as documented in 2016 InCites report",
+                        "constraints": {
+                            "required": true,
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "ImpactFactor",
+                        "type": "number",
+                        "format": "default",
+                        "trueValues": [
+                            "true",
+                            "True",
+                            "TRUE",
+                            "1"
+                        ],
+                        "falseValues": [
+                            "false",
+                            "False",
+                            "FALSE",
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "2016 Impact Factor as reported in 2017 InCites report",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "TypeofScience",
+                        "type": "string",
+                        "format": "default",
+                        "trueValues": [
+                            "true",
+                            "True",
+                            "TRUE",
+                            "1"
+                        ],
+                        "falseValues": [
+                            "false",
+                            "False",
+                            "FALSE",
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "B = Biological sciences.  Journals that publish research in biology, biotechnology, bioengineering, ecology, agriculture.\nC = Clinical sciences.  Journals that aim to publish clinical research or have a substantial proportion of articles that report the results of clinical research; includes medical journals and social science journals with a clinical focus.\nM = Mathematical sciences. Mathematics, statistics, and computer science; also includes mathematically oriented journals in biology, physics, and social science.\nP = Physical science, including engineering; excluding bioengineering. \nS = Social sciences, including humanities.\nM = Multidisciplinary science journals, e.g. Science, Nature, etc.\n",
+                        "title": "Disciplinary Category of Journal",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "publisher",
+                        "type": "string",
+                        "format": "default",
+                        "trueValues": [
+                            "true",
+                            "True",
+                            "TRUE",
+                            "1"
+                        ],
+                        "falseValues": [
+                            "false",
+                            "False",
+                            "FALSE",
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "Publisher as documented in 2016 InCites report",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "URL",
+                        "type": "string",
+                        "format": "uri",
+                        "trueValues": [
+                            "true",
+                            "True",
+                            "TRUE",
+                            "1"
+                        ],
+                        "falseValues": [
+                            "false",
+                            "False",
+                            "FALSE",
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "Author Guidelines URL",
+                        "description": "Webpage location where author guidelines are described.",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "URL2",
+                        "type": "string",
+                        "format": "default",
+                        "trueValues": [
+                            "true",
+                            "True",
+                            "TRUE",
+                            "1"
+                        ],
+                        "falseValues": [
+                            "false",
+                            "False",
+                            "FALSE",
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "Webpage location describring data sharing guidelines linked from primary author guidelines page."
+                    },
+                    {
+                        "name": "data_sharing_req_pub",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "The journal requires data sharing as a condition of publication",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "data_sharing_req_noeffct_pub",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "The journal requires data sharing required, but there is no explicit statement regarding effect on publication/editorial \ndecision-making\n",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "data_sharing_encouraged",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "The journal explicitly encouraged/addressed data sharing, but not required",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "data_sharing_review",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "Journal guidelines state that shared data will be used in the peer review process",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "data_sharing_mentioned",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "Data sharing was only mentioned indirectly and not explicitly required or encouraged.",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "data_sharing_protein",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "The journal's guidelines only addressed protein, proteomic, and/or genomic data sharing.",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "data_sharing_codes",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "The journal guidelines only addressed the sharing of computer code.",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "data_sharing_none",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "The journal's guidelines did not address data sharing",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "protein_deposit",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "Sharing of protein, proteomic, genetic, or genomic data sharing required with deposit to specific data banks",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "code_deposit",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "Sharing of computer codes or models required with deposit to data banks",
+                        "title": ""
+                    },
+                    {
+                        "name": "trial_deposit",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "Sharing of clinical trial data required with deposit to data banks"
+                    },
+                    {
+                        "name": "online_reposit",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "Online repositories are a recommended sharing method",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "journal_host_sharing",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "Journal hosting is a recommended sharing method",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "share_request_to_author",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "Requests to authors is a recommended sharing method",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "multiple_sharing",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "Multiple data sharing methods were recommended.",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "unspecified_sharing",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "No data sharing method/s was/were specified. ",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "journal_host_all",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "title": "",
+                        "description": "If data is journal hosted, the journal will host regardless of size\n",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "journal_host_limit",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "If data is journal hosted, there are file/s size limits\n",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "journal_host_unspecified",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "File size limitations for journal hosted shared data are not addressed.",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "open_access",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "The journal is Open Access and indexed in the Directory of Open Access Journals (DOAJ).",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "Subcription.",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "The journal is not open access and not indexed in the Directory of Open Access Journals (DOAJ)",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "data_copyright",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "The journal's data sharing guidelines address the licensing of shared data.",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "archival",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "The journal's data sharing guidelines includes a statement about how long shared data should be made accessible.",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "reproducibility",
+                        "type": "boolean",
+                        "format": "default",
+                        "trueValues": [
+                            "1"
+                        ],
+                        "falseValues": [
+                            "0"
+                        ],
+                        "decimalChar": ".",
+                        "groupChar": "",
+                        "bareNumber": true,
+                        "description": "The journal's data sharing policy notes reproducibility or analogous concepts noted as purpose of data policy",
+                        "constraints": {
+                            "required": true
+                        }
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            },
+            "format": "csv",
+            "mediatype": "text/csv",
+            "dialect": {
+                "caseSensitiveHeader": false,
+                "delimiter": ",",
+                "doubleQuote": true,
+                "header": true,
+                "lineTerminator": "\r\n",
+                "quoteChar": "\"",
+                "skipInitialSpace": true
+            },
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "title": "Creative Commons Attribution 4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/"
+                }
+            ],
+            "name": "if-discipline-datasharing-policy-rawdata-1.0.0",
+            "description": "Data and code for manuscript:\n\nDavid B Resnik, Melissa Morales, Rachel Landrum, Min Shi, Jessica Minnier, Nicole A. Vasilevsky & Robin E. Champieux (2019) Effect of Impact Factor and Discipline on Journal Data Sharing Policies, Accountability in Research, DOI: 10.1080/08989621.2019.1591277\n\nZenodo pre-print DOI:  10.5281/zenodo.2592682",
+            "primaryKeys": [
+                "ID"
+            ],
+            "path": "data/if-discipline-datasharing-policy-rawdata-1.0.0.csv"
+        }
+    ],
+    "contributors": [
+        {
+            "title": "Robin Champieux",
+            "path": "",
+            "email": "chyampieu@ohsu.edu",
+            "role": "contributor",
+            "organization": "Oregon Health & Science University"
+        },
+        {
+            "title": "Nicole Vasilevsky",
+            "path": "",
+            "email": "",
+            "role": "contributor",
+            "organization": "Oregon Clinical & Translational Research Institute, Department of Medical Informatics and Clinical Epidemiology, Oregon Health & Science University"
+        },
+        {
+            "title": "David B Resnik",
+            "path": "",
+            "email": "",
+            "role": "contributor",
+            "organization": "NIEHS"
+        },
+        {
+            "title": "Melissa Morales",
+            "path": "",
+            "email": "",
+            "role": "contributor",
+            "organization": "Duke University"
+        },
+        {
+            "title": "Rachel Landrum",
+            "path": "",
+            "email": "",
+            "role": "contributor",
+            "organization": "Duke University"
+        },
+        {
+            "title": "Min Shi",
+            "path": "",
+            "email": "",
+            "role": "contributor",
+            "organization": "NIEHS"
+        },
+        {
+            "title": "Jessica Minnier",
+            "path": "",
+            "email": "",
+            "role": "contributor",
+            "organization": "Oregon Clinical & Translational Research Institute, Department of Medical Informatics and Clinical Epidemiology, Oregon Health & Science University"
+        }
+    ],
+    "licenses": [
+        {
+            "name": "CC-BY-4.0",
+            "title": "Creative Commons Attribution 4.0",
+            "path": "https://creativecommons.org/licenses/by/4.0/"
+        }
+    ],
+    "name": "if-discipline-datasharing-policy-rawdata-1.0.0-package",
+    "title": "",
+    "description": "Data and code for manuscript:\n\nDavid B Resnik, Melissa Morales, Rachel Landrum, Min Shi, Jessica Minnier, Nicole A. Vasilevsky & Robin E. Champieux (2019) Effect of Impact Factor and Discipline on Journal Data Sharing Policies, Accountability in Research, DOI: 10.1080/08989621.2019.1591277\n\nZenodo pre-print DOI:  10.5281/zenodo.2592682",
+    "version": "1.0.0",
+    "sources": [
+        {
+            "title": "Journal Citation Reports",
+            "path": "https://clarivate.com/products/journal-citation-reports/",
+            "email": ""
+        },
+        {
+            "title": "Directory of Open Access Journals",
+            "path": "https://doaj.org/",
+            "email": ""
+        }
+    ]
+}
