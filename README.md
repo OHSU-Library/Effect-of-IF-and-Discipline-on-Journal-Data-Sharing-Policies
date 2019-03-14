@@ -6,6 +6,14 @@ David B Resnik, Melissa Morales, Rachel Landrum, Min Shi, Jessica Minnier, Nicol
 
 Zenodo pre-print DOI: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2592682.svg)](https://doi.org/10.5281/zenodo.2592682)
 
+Data collection utilized three sources:
+
+2016 InCites Journal Citations Report
+Directory of Open Access Journal
+Journal websites and author guidelines
+
+The data was collected and analyzed between May 2018 and October 2018.
+
 # Data and Code
 
 Data can be found in [data/if-discipline-datasharing-policy-rawdata-1.0.0.csv](data/if-discipline-datasharing-policy-rawdata-1.0.0.csv).
