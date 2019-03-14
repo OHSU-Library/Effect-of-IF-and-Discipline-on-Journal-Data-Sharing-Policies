@@ -1,20 +1,13 @@
 Analysis - Data Sharing Policies
 ================
 
--   [Table 1](#table-1)
--   [Table 2](#table-2)
-    -   [Table 2 plot](#table-2-plot)
--   [Table 3](#table-3)
-    -   [Table 3 Plot](#table-3-plot)
-
 ``` r
 #alldata <- read_excel(here("data","RawData_Reviewed_by_NV.xlsx"),sheet="All data",skip = 1,na = c("","NA"))
 alldata <- read_excel(here("data","final_10152018.xlsx"),skip=2, na=c("","NA"))
 alldata %<>% clean_names()
 ```
 
-Table 1
-=======
+# Table 1
 
 ``` r
 alldata %>% tabyl(typeof_science) %>% 
@@ -25,87 +18,172 @@ alldata %>% tabyl(typeof_science) %>%
 ```
 
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;">
+
 typeof\_science
+
 </th>
+
 <th style="text-align:right;">
+
 n
+
 </th>
+
 <th style="text-align:left;">
+
 percent
+
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr>
+
 <td style="text-align:left;">
+
 B
+
 </td>
+
 <td style="text-align:right;">
+
 81
+
 </td>
+
 <td style="text-align:left;">
+
 18.1%
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 C
+
 </td>
+
 <td style="text-align:right;">
+
 84
+
 </td>
+
 <td style="text-align:left;">
+
 18.8%
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 M
+
 </td>
+
 <td style="text-align:right;">
+
 97
+
 </td>
+
 <td style="text-align:left;">
+
 21.7%
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 P
+
 </td>
+
 <td style="text-align:right;">
+
 89
+
 </td>
+
 <td style="text-align:left;">
+
 19.9%
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 S
+
 </td>
+
 <td style="text-align:right;">
+
 96
+
 </td>
+
 <td style="text-align:left;">
+
 21.5%
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 Total
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:left;">
--   </td>
+
+  - 
+    
+    </td>
+    
     </tr>
+    
     </tbody>
+    
     </table>
+
+<!-- end list -->
 
 ``` r
 alldata %>% tabyl(open_access) %>% 
@@ -116,57 +194,106 @@ alldata %>% tabyl(open_access) %>%
 ```
 
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;">
+
 open\_access
+
 </th>
+
 <th style="text-align:right;">
+
 n
+
 </th>
+
 <th style="text-align:left;">
+
 percent
+
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr>
+
 <td style="text-align:left;">
+
 0
+
 </td>
+
 <td style="text-align:right;">
+
 394
+
 </td>
+
 <td style="text-align:left;">
+
 88.1%
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 1
+
 </td>
+
 <td style="text-align:right;">
+
 53
+
 </td>
+
 <td style="text-align:left;">
+
 11.9%
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 Total
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:left;">
--   </td>
+
+  - 
+    
+    </td>
+    
     </tr>
+    
     </tbody>
+    
     </table>
 
-Table 2
-=======
+# Table 2
 
 ``` r
 tmp <-  alldata %>% select(id, data_sharing_req_pub:data_sharing_none)
@@ -197,25 +324,45 @@ table2 %>%
 ```
 
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;">
+
 data\_sharing\_policy\_type
+
 </th>
+
 <th style="text-align:right;">
+
 No
+
 </th>
+
 <th style="text-align:right;">
+
 Yes
+
 </th>
+
 <th style="text-align:right;">
+
 % Yes
+
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr>
+
 <td style="text-align:left;">
+
 1.  Data sharing required as condition of publication
     </td>
     <td style="text-align:right;">
@@ -230,7 +377,8 @@ Yes
     </tr>
     <tr>
     <td style="text-align:left;">
-    1.  Data sharing required but no explicit statement regarding effect on publication/editorial decision-making
+    2.  Data sharing required but no explicit statement regarding effect
+        on publication/editorial decision-making
         </td>
         <td style="text-align:right;">
         412
@@ -244,7 +392,8 @@ Yes
         </tr>
         <tr>
         <td style="text-align:left;">
-        1.  Data sharing explicitly encouraged/addressed but not required
+        3.  Data sharing explicitly encouraged/addressed but not
+            required
             </td>
             <td style="text-align:right;">
             266
@@ -258,7 +407,7 @@ Yes
             </tr>
             <tr>
             <td style="text-align:left;">
-            1.  Shared data will be used in peer review
+            4.  Shared data will be used in peer review
                 </td>
                 <td style="text-align:right;">
                 422
@@ -272,7 +421,7 @@ Yes
                 </tr>
                 <tr>
                 <td style="text-align:left;">
-                1.  Data sharing mentioned indirectly
+                5.  Data sharing mentioned indirectly
                     </td>
                     <td style="text-align:right;">
                     423
@@ -286,7 +435,8 @@ Yes
                     </tr>
                     <tr>
                     <td style="text-align:left;">
-                    1.  Only protein, proteomic, and/or genomic data sharing are addressed
+                    6.  Only protein, proteomic, and/or genomic data
+                        sharing are addressed
                         </td>
                         <td style="text-align:right;">
                         435
@@ -300,7 +450,7 @@ Yes
                         </tr>
                         <tr>
                         <td style="text-align:left;">
-                        1.  Only sharing of computer code is addressed
+                        7.  Only sharing of computer code is addressed
                             </td>
                             <td style="text-align:right;">
                             440
@@ -314,7 +464,8 @@ Yes
                             </tr>
                             <tr>
                             <td style="text-align:left;">
-                            1.  No mention of data sharing
+                            8.  No mention of data
+sharing
                                 </td>
                                 <td style="text-align:right;">
                                 252
@@ -329,8 +480,7 @@ Yes
                                 </tbody>
                                 </table>
 
-Table 2 plot
-------------
+## Table 2 plot
 
 ``` r
 table2p <- left_join(table2,label_dict,by=c("data_sharing_policy_type"="longnames"))%>%
@@ -356,8 +506,7 @@ ggplot(table2p,aes(x=factor(num,levels=8:1),y=pct_yes,fill=data_sharing_policy_t
 
 <img src="figs/table2_plot-1.png" style="display: block; margin: auto;" />
 
-Table 3
-=======
+# Table 3
 
 ``` r
 tmp <-  alldata %>% select(id, protein_deposit:reproducibility) %>%
@@ -406,298 +555,590 @@ table3 %>%
 ```
 
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;">
+
 Specific Types of Data Sharing
+
 </th>
+
 <th style="text-align:right;">
+
 n
+
 </th>
+
 <th style="text-align:right;">
+
 No
+
 </th>
+
 <th style="text-align:right;">
+
 Yes
+
 </th>
+
 <th style="text-align:right;">
+
 % Yes
+
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr grouplength="3">
+
 <td colspan="5" style="border-bottom: 1px solid;">
+
 <strong>Specific Data</strong>
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
-Protein, proteomic, genetic, or genomic data sharing required with deposit to specific data banks
+
+Protein, proteomic, genetic, or genomic data sharing required with
+deposit to specific data banks
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:right;">
+
 403
+
 </td>
+
 <td style="text-align:right;">
+
 44
+
 </td>
+
 <td style="text-align:right;">
+
 9.8
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 Sharing of computer codes or models with deposit
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:right;">
+
 357
+
 </td>
+
 <td style="text-align:right;">
+
 90
+
 </td>
+
 <td style="text-align:right;">
+
 20.1
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 Sharing of clinical trial data with deposit
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:right;">
+
 436
+
 </td>
+
 <td style="text-align:right;">
+
 11
+
 </td>
+
 <td style="text-align:right;">
+
 2.5
+
 </td>
+
 </tr>
+
 <tr grouplength="5">
+
 <td colspan="5" style="border-bottom: 1px solid;">
+
 <strong>Recommended sharing method</strong>
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 Public online repository
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:right;">
+
 258
+
 </td>
+
 <td style="text-align:right;">
+
 189
+
 </td>
+
 <td style="text-align:right;">
+
 42.3
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 Journal hosted
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:right;">
+
 428
+
 </td>
+
 <td style="text-align:right;">
+
 19
+
 </td>
+
 <td style="text-align:right;">
+
 4.3
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 By reader request to authors
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:right;">
+
 438
+
 </td>
+
 <td style="text-align:right;">
+
 9
+
 </td>
+
 <td style="text-align:right;">
+
 2.0
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 Multiple methods equally recommended
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:right;">
+
 415
+
 </td>
+
 <td style="text-align:right;">
+
 32
+
 </td>
+
 <td style="text-align:right;">
+
 7.2
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 Unspecified
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:right;">
+
 247
+
 </td>
+
 <td style="text-align:right;">
+
 200
+
 </td>
+
 <td style="text-align:right;">
+
 44.7
+
 </td>
+
 </tr>
+
 <tr grouplength="3">
+
 <td colspan="5" style="border-bottom: 1px solid;">
+
 <strong>If data is journal hosted</strong>
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 Journal will host regardless of size
+
 </td>
+
 <td style="text-align:right;">
+
 19
+
 </td>
+
 <td style="text-align:right;">
+
 17
+
 </td>
+
 <td style="text-align:right;">
+
 2
+
 </td>
+
 <td style="text-align:right;">
+
 10.5
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 Journal has data hosting file/s size limit
+
 </td>
+
 <td style="text-align:right;">
+
 19
+
 </td>
+
 <td style="text-align:right;">
+
 17
+
 </td>
+
 <td style="text-align:right;">
+
 2
+
 </td>
+
 <td style="text-align:right;">
+
 10.5
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 Unspecified
+
 </td>
+
 <td style="text-align:right;">
+
 19
+
 </td>
+
 <td style="text-align:right;">
+
 4
+
 </td>
+
 <td style="text-align:right;">
+
 15
+
 </td>
+
 <td style="text-align:right;">
+
 78.9
+
 </td>
+
 </tr>
+
 <tr grouplength="1">
+
 <td colspan="5" style="border-bottom: 1px solid;">
+
 <strong>Copyright</strong>
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 Copyright/licensing of data explicitly stated or mentioned
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:right;">
+
 438
+
 </td>
+
 <td style="text-align:right;">
+
 9
+
 </td>
+
 <td style="text-align:right;">
+
 2.0
+
 </td>
+
 </tr>
+
 <tr grouplength="1">
+
 <td colspan="5" style="border-bottom: 1px solid;">
+
 <strong>Archiving</strong>
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
+
 Data archiving/retention policy explicitly stated
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:right;">
+
 443
+
 </td>
+
 <td style="text-align:right;">
+
 4
+
 </td>
+
 <td style="text-align:right;">
+
 0.9
+
 </td>
+
 </tr>
+
 <tr grouplength="1">
+
 <td colspan="5" style="border-bottom: 1px solid;">
+
 <strong>Reproducibility</strong>
+
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left; padding-left: 2em;" indentlevel="1">
-Reproducibility or analogous concepts noted as purpose of data policy
+
+Reproducibility or analogous concepts noted as purpose of data
+policy
+
 </td>
+
 <td style="text-align:right;">
+
 447
+
 </td>
+
 <td style="text-align:right;">
+
 341
+
 </td>
+
 <td style="text-align:right;">
+
 106
+
 </td>
+
 <td style="text-align:right;">
+
 23.7
+
 </td>
+
 </tr>
+
 </tbody>
+
 </table>
-Table 3 Plot
-------------
+
+## Table 3 Plot
 
 ``` r
 table3p <- left_join(table3,label3_dict,by=c("specific_data_sharing"="longnames"))%>%
