@@ -9,7 +9,8 @@ This is the code to generate figures for the following publication:
 > David B Resnik, Melissa Morales, Rachel Landrum, Min Shi, Jessica
 > Minnier, Nicole A. Vasilevsky & Robin E. Champieux (2019) Effect of
 > Impact Factor and Discipline on Journal Data Sharing Policies,
-> Accountability in Research, DOI: 10.1080/08989621.2019.1591277
+> Accountability in Research, DOI:
+> [10.1080/08989621.2019.1591277](https://doi.org/10.1080/08989621.2019.1591277)
 
 A pre-print of the accepted paper is on
 Zenodo:
