@@ -8,6 +8,6 @@ Zenodo pre-print DOI: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.259268
 
 # Data and Code
 
-Data can be found in [data/final_10152018.xlsx](data/final_10152018.xlsx).
+Data can be found in [data/if-discipline-datasharing-policy-rawdata-1.0.0.csv](data/if-discipline-datasharing-policy-rawdata-1.0.0.csv).
 
 Analysis code for tables and figures can be seen in [code/analysis_report.md](code/analysis_report.md) (author of code: Jessica Minnier, OHSU, [@jminnier](https://github.com/jminnier/))

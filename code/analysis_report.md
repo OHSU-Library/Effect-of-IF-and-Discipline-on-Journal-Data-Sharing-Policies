@@ -22,12 +22,11 @@ The author of this code is Jessica Minnier, OHSU `minnier-at-ohsu-edu`.
 # Data
 
 The final data is in the
-[data/final\_10152018.xlsx](data/final_10152018.xlsx)
+[data/if-discipline-datasharing-policy-rawdata-1.0.0.csv](data/if-discipline-datasharing-policy-rawdata-1.0.0.csv)
 file.
 
 ``` r
-#alldata <- read_excel(here("data","RawData_Reviewed_by_NV.xlsx"),sheet="All data",skip = 1,na = c("","NA"))
-alldata <- read_excel(here("data","final_10152018.xlsx"),skip=2, na=c("","NA"))
+alldata <- read_csv(here("data","if-discipline-datasharing-policy-rawdata-1.0.0.csv"),na=c("","NA"))
 alldata %<>% clean_names()
 ```
 
