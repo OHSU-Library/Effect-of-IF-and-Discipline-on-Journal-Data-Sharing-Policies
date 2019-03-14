@@ -8,9 +8,11 @@ Zenodo pre-print DOI: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.259268
 
 Data collection utilized three sources:
 
-2016 InCites Journal Citations Report;
-Directory of Open Access Journal;
-Journal websites and author guidelines;
+2016 InCites Journal Citations Report
+
+Directory of Open Access Journal
+
+Journal websites and author guidelines
 
 The data was collected and analyzed between May 2018 and October 2018.
 
