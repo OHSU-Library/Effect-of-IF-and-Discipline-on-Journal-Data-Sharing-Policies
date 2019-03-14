@@ -1,4 +1,5 @@
-Analysis - Data Sharing Policies
+Analysis - Effect of Impact Factor and Discipline on Journal Data
+Sharing Policies
 ================
 
 # Publication
@@ -14,6 +15,8 @@ A pre-print of the accepted paper is on
 Zenodo:
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2592682.svg)](https://doi.org/10.5281/zenodo.2592682)
+
+The author of this code is Jessica Minnier, OHSU `minnier-at-ohsu-edu`.
 
 # Data
 
