@@ -1,6 +1,26 @@
 Analysis - Data Sharing Policies
 ================
 
+# Publication
+
+This is the code to generate figures for the following publication:
+
+> David B Resnik, Melissa Morales, Rachel Landrum, Min Shi, Jessica
+> Minnier, Nicole A. Vasilevsky & Robin E. Champieux (2019) Effect of
+> Impact Factor and Discipline on Journal Data Sharing Policies,
+> Accountability in Research, DOI: 10.1080/08989621.2019.1591277
+
+A pre-print of the accepted paper is on
+Zenodo:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2592682.svg)](https://doi.org/10.5281/zenodo.2592682)
+
+# Data
+
+The final data is in the
+[data/final\_10152018.xlsx](data/final_10152018.xlsx)
+file.
+
 ``` r
 #alldata <- read_excel(here("data","RawData_Reviewed_by_NV.xlsx"),sheet="All data",skip = 1,na = c("","NA"))
 alldata <- read_excel(here("data","final_10152018.xlsx"),skip=2, na=c("","NA"))
