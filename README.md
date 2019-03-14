@@ -10,4 +10,4 @@ Zenodo pre-print DOI: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.259268
 
 Data can be found in [data/final_10152018.xlsx](data/final_10152018.xlsx).
 
-Analysis code for tables and figures can be seen in [code/analysis_report.md](code/analysis_report.md) (author of code: Jessica Minnier, OHSU, @jminnier)
+Analysis code for tables and figures can be seen in [code/analysis_report.md](code/analysis_report.md) (author of code: Jessica Minnier, OHSU, [@jminnier](https://github.com/jminnier/))
