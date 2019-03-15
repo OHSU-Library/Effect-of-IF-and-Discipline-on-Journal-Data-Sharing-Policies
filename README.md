@@ -4,6 +4,8 @@ Data and code for manuscript:
 
 David B Resnik, Melissa Morales, Rachel Landrum, Min Shi, Jessica Minnier, Nicole A. Vasilevsky & Robin E. Champieux (2019) *Effect of Impact Factor and Discipline on Journal Data Sharing Policies*, Accountability in Research, [DOI: 10.1080/08989621.2019.1591277](https://doi.org/10.1080/08989621.2019.1591277)
 
+[![DOI](https://zenodo.org/badge/72469119.svg)](https://zenodo.org/badge/latestdoi/72469119)
+
 Zenodo pre-print DOI: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2592682.svg)](https://doi.org/10.5281/zenodo.2592682)
 
 Data collection utilized three sources:
@@ -19,3 +21,4 @@ The data was collected and analyzed between May 2018 and October 2018.
 Data can be found in [data/if-discipline-datasharing-policy-rawdata-1.0.0.csv](data/if-discipline-datasharing-policy-rawdata-1.0.0.csv).
 
 Analysis code for tables and figures can be seen in [code/analysis_report.md](code/analysis_report.md) (author of code: Jessica Minnier, OHSU, [@jminnier](https://github.com/jminnier/))
+
