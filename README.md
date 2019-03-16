@@ -20,4 +20,4 @@ Data can be found in [data/if-discipline-datasharing-policy-rawdata-1.0.0.csv](d
 
 Analysis code for tables and figures can be seen in [code/analysis_report.md](code/analysis_report.md) (author of code: Jessica Minnier, OHSU, [@jminnier](https://github.com/jminnier/))
 
-[![DOI](https://zenodo.org/badge/72469119.svg)](https://zenodo.org/badge/latestdoi/72469119)
+This repository is archived in Zenodo:  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2595591.svg)](https://doi.org/10.5281/zenodo.2595591)
